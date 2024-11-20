@@ -352,10 +352,10 @@ GameObject:
   - component: {fileID: 296377837}
   - component: {fileID: 296377840}
   - component: {fileID: 296377839}
-  - component: {fileID: 296377838}
+  - component: {fileID: 296377841}
   m_Layer: 0
-  m_Name: Image
-  m_TagString: Untagged
+  m_Name: Email
+  m_TagString: Email
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,32 +367,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296377836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1906636021}
-  m_Father: {fileID: 554223377}
+  m_Father: {fileID: 525155182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -569, y: 297}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -571.5, y: 291.5}
+  m_SizeDelta: {x: 111, y: 99}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &296377838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296377836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050ae1d12c671874d8e715953691822f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrulumVitae: {fileID: 1186681611}
 --- !u!114 &296377839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +418,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296377836}
   m_CullTransparentMesh: 1
+--- !u!114 &296377841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296377836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b466f357c491f064fa9a542ecfecdc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrulumVitae: {fileID: 1186681611}
 --- !u!1 &338381621
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +694,7 @@ RectTransform:
   - {fileID: 558537791}
   - {fileID: 2027517691}
   - {fileID: 1186681612}
+  - {fileID: 296377837}
   m_Father: {fileID: 554223377}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -733,7 +734,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 525155182}
-  - {fileID: 296377837}
   m_Father: {fileID: 1797793838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1926,7 +1926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1735736367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 1906636023}
   - component: {fileID: 1906636022}
   m_Layer: 0
-  m_Name: Email
+  m_Name: EmailText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2502,6 +2502,10 @@ PrefabInstance:
     - target: {fileID: 2867239551981519060, guid: a5958adab7faf8a44922bd934f9aa5c6, type: 3}
       propertyPath: m_Name
       value: CV
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867239551981519060, guid: a5958adab7faf8a44922bd934f9aa5c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4555995731413290335, guid: a5958adab7faf8a44922bd934f9aa5c6, type: 3}
       propertyPath: m_Pivot.x
