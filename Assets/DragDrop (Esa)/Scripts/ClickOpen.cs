@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
+
 
 public class ClickOpen : MonoBehaviour, IPointerDownHandler
 {
+   
+    
     public GameObject CurrulumVitae;
     private RectTransform rectTransform;
     float muhFloat = 1;
+    private Vector3 cvPosition = new Vector3(0, 3, 2);
 
 
     void Start()
     {
-        //CurrulumVitae = GetComponent<GameObject>();
-        rectTransform = GetComponent<RectTransform>();       
-        
+        rectTransform = GetComponent<RectTransform>();
+
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -25,8 +29,11 @@ public class ClickOpen : MonoBehaviour, IPointerDownHandler
 
     void InstantiateCaller()
     {
-        Instantiate(CurrulumVitae, GameObject.FindGameObjectWithTag("Desktop").transform, rectTransform);
+        
+        Instantiate(CurrulumVitae, GameObject.FindGameObjectWithTag("Desktop").transform);
     }
+
+
 
     void SpawnCV()
     {
