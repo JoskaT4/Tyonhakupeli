@@ -2304,6 +2304,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 525155182}
     m_Modifications:
+    - target: {fileID: 2764448867468248376, guid: a5958adab7faf8a44922bd934f9aa5c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7000827fd5da629439eb88954142de70, type: 3}
     - target: {fileID: 2867239551981519060, guid: a5958adab7faf8a44922bd934f9aa5c6, type: 3}
       propertyPath: m_Name
       value: CV
