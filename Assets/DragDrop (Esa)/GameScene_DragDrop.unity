@@ -293,6 +293,7 @@ MonoBehaviour:
   - {fileID: 1794629984}
   - {fileID: 47962451}
   - {fileID: 1369925220}
+  muhFloat: 0.5
 --- !u!1001 &421576442
 PrefabInstance:
   m_ObjectHideFlags: 0
