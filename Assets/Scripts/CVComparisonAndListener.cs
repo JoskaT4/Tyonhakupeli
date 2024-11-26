@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;  // Required for detecting clicks
+using UnityEngine.EventSystems;
 
 public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
 {
-    // Define the correct CV values
-    private string requiredSkills = "Programming, Leadership, Communication";
-    private string requiredExperience = "3 years";
-    private string requiredEducation = "Bachelor's";
+    // Define the correct CV values as per your input
+    private string requiredSkills = "Kielitaito: Suomi, Englanti";
+    private string requiredExperience = "Työkokemus: Rakennusalantyöt, erilaiset keikkatyöt ja nuorena kesätyöt.";
+    private string requiredEducation = "Koulutus: Ammattikorkeakoulu";
+    private string requiredCard = "Työkortit: Työturvallisuuskortti, ajokortti";
 
     // Reference to the TextMeshPro component (the clicked text object)
     private TMP_Text textObject;
@@ -15,7 +16,6 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
     // This method is called when the script starts
     void Start()
     {
-        // Set the reference to the TextMeshPro component (the text field this script is attached to)
         textObject = GetComponent<TMP_Text>();
 
         if (textObject == null)
@@ -24,42 +24,41 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        // Initialize the correct values when the scene starts
         InitializeValues();
     }
 
-    // This method initializes the required values based on the text object name
     private void InitializeValues()
     {
         if (textObject != null)
         {
-            if (textObject.name == "SkillsText")  // Check if it's the Skills Text field
+            if (textObject.name == "SkillsText")
             {
                 textObject.text = requiredSkills;
             }
-            else if (textObject.name == "ExperienceText")  // Check if it's the Experience Text field
+            else if (textObject.name == "ExperienceText")
             {
                 textObject.text = requiredExperience;
             }
-            else if (textObject.name == "EducationText")  // Check if it's the Education Text field
+            else if (textObject.name == "EducationText")
             {
                 textObject.text = requiredEducation;
+            }
+            else if (textObject.name == "CardText")
+            {
+                textObject.text = requiredCard;
             }
         }
     }
 
-    // This method is triggered when the text is clicked
     public void OnPointerClick(PointerEventData eventData)
     {
-        // If the text is already colored green or red, reset to default
         if (textObject.color == Color.green || textObject.color == Color.red)
         {
-            textObject.color = Color.white;  // Reset to normal (white)
+            textObject.color = Color.white;  // Reset to normal
             Debug.Log(textObject.name + " color reset to normal.");
         }
         else
         {
-            // Compare the text based on the section (Skills, Experience, Education)
             if (textObject.name == "SkillsText" && textObject.text == requiredSkills)
             {
                 CheckCV(textObject, requiredSkills);
@@ -72,25 +71,27 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
             {
                 CheckCV(textObject, requiredEducation);
             }
+            else if (textObject.name == "CardText" && textObject.text == requiredCard)
+            {
+                CheckCV(textObject, requiredCard);
+            }
             else
             {
-                // In case of incorrect or unmatching text, call CheckCV
                 CheckCV(textObject, "Incorrect");
             }
         }
     }
 
-    // This method compares the clicked text with the required value and highlights the color
     private void CheckCV(TMP_Text textObject, string requiredValue)
     {
         if (textObject.text == requiredValue)
         {
-            textObject.color = Color.green;  // Correct
+            textObject.color = Color.green;
             Debug.Log(textObject.name + " is correct!");
         }
         else
         {
-            textObject.color = Color.red;    // Incorrect
+            textObject.color = Color.red;
             Debug.Log(textObject.name + " is incorrect!");
         }
     }
