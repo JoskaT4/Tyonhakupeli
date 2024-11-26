@@ -88,9 +88,20 @@ public class ClickOpenGPT : MonoBehaviour, IPointerClickHandler //Message from p
                             {
                                 // Set the new position (Email's local position + offset)
                                 newRectTransform.anchoredPosition = localPositionOnDesktop + offset;
+                                GameObject specificPrefab = CurriculumVitae[i];
+
+                                if (specificPrefab.name == "CompanyTask") // Replace with your prefab's name
+                                {
+                                    newRectTransform.localScale = new Vector3(5f, 5f, 2f); // Scale it up
+                                }
+
+                                else
+                                {
+                                    newRectTransform.localScale = Vector3.one; // Default scale
+                                }
 
                                 // Optionally, reset the scale and rotation
-                                newRectTransform.localScale = Vector3.one;
+
                                 newRectTransform.localRotation = Quaternion.identity;
                             }
                         }
