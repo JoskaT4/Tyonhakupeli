@@ -1,14 +1,15 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
 {
-    // Define the correct CV values as per your input
-    private string requiredSkills = "Kielitaito: Suomi, Englanti";
-    private string requiredExperience = "Työkokemus: Rakennusalantyöt, erilaiset keikkatyöt ja nuorena kesätyöt.";
-    private string requiredEducation = "Koulutus: Ammattikorkeakoulu";
-    private string requiredCard = "Työkortit: Työturvallisuuskortti, ajokortti";
+    // Define the required CV values
+    private string[] requiredSkills = { "Suomi", "Englanti" };
+    private string[] requiredExperience = { "Rakennusalantyöt", "keikkatyöt", "kesätyöt" };
+    private string requiredEducation = "Ammattikorkeakoulu";
+    private string[] requiredCard = { "Työturvallisuuskortti", "ajokortti" };
 
     // Reference to the TextMeshPro component (the clicked text object)
     private TMP_Text textObject;
@@ -33,19 +34,19 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
         {
             if (textObject.name == "SkillsText")
             {
-                textObject.text = requiredSkills;
+                textObject.text = "Kielitaito: " + string.Join(", ", requiredSkills);
             }
             else if (textObject.name == "ExperienceText")
             {
-                textObject.text = requiredExperience;
+                textObject.text = "Työkokemus: " + string.Join(", ", requiredExperience);
             }
             else if (textObject.name == "EducationText")
             {
-                textObject.text = requiredEducation;
+                textObject.text = "Koulutus: " + requiredEducation;
             }
             else if (textObject.name == "CardText")
             {
-                textObject.text = requiredCard;
+                textObject.text = "Työkortit: " + string.Join(", ", requiredCard);
             }
         }
     }
@@ -59,40 +60,66 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            if (textObject.name == "SkillsText" && textObject.text == requiredSkills)
+            if (textObject.name == "SkillsText")
             {
-                CheckCV(textObject, requiredSkills);
+                CheckSkills(textObject.text);
             }
-            else if (textObject.name == "ExperienceText" && textObject.text == requiredExperience)
+            else if (textObject.name == "ExperienceText")
             {
-                CheckCV(textObject, requiredExperience);
+                CheckExperience(textObject.text);
             }
-            else if (textObject.name == "EducationText" && textObject.text == requiredEducation)
+            else if (textObject.name == "EducationText")
             {
-                CheckCV(textObject, requiredEducation);
+                CheckEducation(textObject.text);
             }
-            else if (textObject.name == "CardText" && textObject.text == requiredCard)
+            else if (textObject.name == "CardText")
             {
-                CheckCV(textObject, requiredCard);
-            }
-            else
-            {
-                CheckCV(textObject, "Incorrect");
+                CheckCards(textObject.text);
             }
         }
     }
 
-    private void CheckCV(TMP_Text textObject, string requiredValue)
+    private void CheckSkills(string userInput)
     {
-        if (textObject.text == requiredValue)
+        string[] userSkills = ExtractContent(userInput);
+        bool isMatch = requiredSkills.Any(skill => userSkills.Contains(skill));
+        UpdateTextColor(isMatch);
+    }
+
+    private void CheckExperience(string userInput)
+    {
+        string[] userExperience = ExtractContent(userInput);
+        bool isMatch = requiredExperience.Any(exp => userExperience.Contains(exp));
+        UpdateTextColor(isMatch);
+    }
+
+    private void CheckEducation(string userInput)
+    {
+        bool isMatch = userInput.Contains(requiredEducation);
+        UpdateTextColor(isMatch);
+    }
+
+    private void CheckCards(string userInput)
+    {
+        string[] userCards = ExtractContent(userInput);
+        bool isMatch = requiredCard.Any(card => userCards.Contains(card));
+        UpdateTextColor(isMatch);
+    }
+
+    private string[] ExtractContent(string input)
+    {
+        // Extract content after the colon (e.g., "Kielitaito: Suomi, Englanti" -> ["Suomi", "Englanti"])
+        int colonIndex = input.IndexOf(":");
+        if (colonIndex >= 0 && colonIndex < input.Length - 1)
         {
-            textObject.color = Color.green;
-            Debug.Log(textObject.name + " is correct!");
+            return input.Substring(colonIndex + 1).Split(',').Select(item => item.Trim()).ToArray();
         }
-        else
-        {
-            textObject.color = Color.red;
-            Debug.Log(textObject.name + " is incorrect!");
-        }
+        return new string[0];
+    }
+
+    private void UpdateTextColor(bool isMatch)
+    {
+        textObject.color = isMatch ? Color.green : Color.red;
+        Debug.Log(textObject.name + (isMatch ? " matches the requirement!" : " does not match the requirement!"));
     }
 }
