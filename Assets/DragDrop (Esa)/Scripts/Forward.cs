@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Forward : MonoBehaviour, IPointerClickHandler
 {
@@ -19,6 +20,7 @@ public class Forward : MonoBehaviour, IPointerClickHandler
         if (tap == 2)
         {
             Debug.Log("Double Slam!");
+            SceneManager.LoadScene(5);
         }
 
     }

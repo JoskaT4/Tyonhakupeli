@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kari Tuomio CV.unity
     guid: 9ef2ad9e44f04454089edde3a98d79c0
+  - enabled: 1
+    path: Assets/DragDrop (Esa)/EndGame.unity
+    guid: ec977afe0d3548e41a2f34dde39a6b90
   m_configObjects: {}
