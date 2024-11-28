@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private Canvas canvas;  // Reference to the Canvas object
+    [SerializeField] private Canvas canvas;             // Reference to the Canvas object
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+
+    private Transform originalParent;       // To store the item's original parent
+    private Transform desktopParent;        // Reference to the object tagged as "Desktop"
+
 
     // Double-click detection variables
     private float clickTime = 0f;
@@ -18,7 +22,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-    }
+
+        // Find the object tagged as "Desktop"
+        desktopParent = GameObject.FindGameObjectWithTag("Desktop").transform;    }
 
     // Save the position of the object before switching scenes
     public void SavePosition()
@@ -46,6 +52,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     {
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
+
+        // Store the current parent and unparent the object
+        originalParent = transform.parent;
+        transform.SetParent(canvas.transform); // Temporarily reparent to the canvas
     }
 
     // Called during drag
@@ -59,6 +69,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        // If dropped on a valid slot, the slot's OnDrop will reparent the item.
+        // If not dropped on a valid slot, return to the original parent.
+        if (transform.parent == canvas.transform)
+        {
+            transform.SetParent(desktopParent);
+        }
     }
 
     // Called when the object is clicked
