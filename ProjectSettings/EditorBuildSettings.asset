@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maili.unity
     guid: 15b1acd40da5ee14c956a871d44771a7
+  - enabled: 1
+    path: Assets/Scenes/MailiTrash.unity
+    guid: 078d86ff3f9ea3241aa3210cbb9a9526
   m_configObjects: {}
