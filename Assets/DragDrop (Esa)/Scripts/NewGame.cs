@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChange : MonoBehaviour
+public class NewGame : MonoBehaviour
 {
-    public void ChangeScene()
+ public void ClickNewGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(0);
     }
-
-    
-
-
-
-
-
-
 }
-    
-

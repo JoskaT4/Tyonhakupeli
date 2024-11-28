@@ -1,13 +1,15 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;  // Required for detecting clicks
+using UnityEngine.EventSystems;
+using System.Linq;
 
 public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
 {
-    // Define the correct CV values
-    private string requiredSkills = "Programming, Leadership, Communication";
-    private string requiredExperience = "3 years";
-    private string requiredEducation = "Bachelor's";
+    // Define the required CV values
+    private string[] requiredSkills = { "Suomi", "Englanti" };
+    private string[] requiredExperience = { "Rakennusalantyöt", "keikkatyöt", "kesätyöt" };
+    private string requiredEducation = "Ammattikorkeakoulu";
+    private string[] requiredCard = { "Työturvallisuuskortti", "ajokortti" };
 
     // Reference to the TextMeshPro component (the clicked text object)
     private TMP_Text textObject;
@@ -15,7 +17,6 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
     // This method is called when the script starts
     void Start()
     {
-        // Set the reference to the TextMeshPro component (the text field this script is attached to)
         textObject = GetComponent<TMP_Text>();
 
         if (textObject == null)
@@ -24,74 +25,101 @@ public class CVComparisonAndListener : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        // Initialize the correct values when the scene starts
         InitializeValues();
     }
 
-    // This method initializes the required values based on the text object name
     private void InitializeValues()
     {
         if (textObject != null)
         {
-            if (textObject.name == "SkillsText")  // Check if it's the Skills Text field
+            if (textObject.name == "SkillsText")
             {
-                textObject.text = requiredSkills;
+                textObject.text = "Kielitaito: " + string.Join(", ", requiredSkills);
             }
-            else if (textObject.name == "ExperienceText")  // Check if it's the Experience Text field
+            else if (textObject.name == "ExperienceText")
             {
-                textObject.text = requiredExperience;
+                textObject.text = "Työkokemus: " + string.Join(", ", requiredExperience);
             }
-            else if (textObject.name == "EducationText")  // Check if it's the Education Text field
+            else if (textObject.name == "EducationText")
             {
-                textObject.text = requiredEducation;
+                textObject.text = "Koulutus: " + requiredEducation;
+            }
+            else if (textObject.name == "CardText")
+            {
+                textObject.text = "Työkortit: " + string.Join(", ", requiredCard);
             }
         }
     }
 
-    // This method is triggered when the text is clicked
     public void OnPointerClick(PointerEventData eventData)
     {
-        // If the text is already colored green or red, reset to default
         if (textObject.color == Color.green || textObject.color == Color.red)
         {
-            textObject.color = Color.white;  // Reset to normal (white)
+            textObject.color = Color.white;  // Reset to normal
             Debug.Log(textObject.name + " color reset to normal.");
         }
         else
         {
-            // Compare the text based on the section (Skills, Experience, Education)
-            if (textObject.name == "SkillsText" && textObject.text == requiredSkills)
+            if (textObject.name == "SkillsText")
             {
-                CheckCV(textObject, requiredSkills);
+                CheckSkills(textObject.text);
             }
-            else if (textObject.name == "ExperienceText" && textObject.text == requiredExperience)
+            else if (textObject.name == "ExperienceText")
             {
-                CheckCV(textObject, requiredExperience);
+                CheckExperience(textObject.text);
             }
-            else if (textObject.name == "EducationText" && textObject.text == requiredEducation)
+            else if (textObject.name == "EducationText")
             {
-                CheckCV(textObject, requiredEducation);
+                CheckEducation(textObject.text);
             }
-            else
+            else if (textObject.name == "CardText")
             {
-                // In case of incorrect or unmatching text, call CheckCV
-                CheckCV(textObject, "Incorrect");
+                CheckCards(textObject.text);
             }
         }
     }
 
-    // This method compares the clicked text with the required value and highlights the color
-    private void CheckCV(TMP_Text textObject, string requiredValue)
+    private void CheckSkills(string userInput)
     {
-        if (textObject.text == requiredValue)
+        string[] userSkills = ExtractContent(userInput);
+        bool isMatch = requiredSkills.Any(skill => userSkills.Contains(skill));
+        UpdateTextColor(isMatch);
+    }
+
+    private void CheckExperience(string userInput)
+    {
+        string[] userExperience = ExtractContent(userInput);
+        bool isMatch = requiredExperience.Any(exp => userExperience.Contains(exp));
+        UpdateTextColor(isMatch);
+    }
+
+    private void CheckEducation(string userInput)
+    {
+        bool isMatch = userInput.Contains(requiredEducation);
+        UpdateTextColor(isMatch);
+    }
+
+    private void CheckCards(string userInput)
+    {
+        string[] userCards = ExtractContent(userInput);
+        bool isMatch = requiredCard.Any(card => userCards.Contains(card));
+        UpdateTextColor(isMatch);
+    }
+
+    private string[] ExtractContent(string input)
+    {
+        // Extract content after the colon (e.g., "Kielitaito: Suomi, Englanti" -> ["Suomi", "Englanti"])
+        int colonIndex = input.IndexOf(":");
+        if (colonIndex >= 0 && colonIndex < input.Length - 1)
         {
-            textObject.color = Color.green;  // Correct
-            Debug.Log(textObject.name + " is correct!");
+            return input.Substring(colonIndex + 1).Split(',').Select(item => item.Trim()).ToArray();
         }
-        else
-        {
-            textObject.color = Color.red;    // Incorrect
-            Debug.Log(textObject.name + " is incorrect!");
-        }
+        return new string[0];
+    }
+
+    private void UpdateTextColor(bool isMatch)
+    {
+        textObject.color = isMatch ? Color.green : Color.red;
+        Debug.Log(textObject.name + (isMatch ? " matches the requirement!" : " does not match the requirement!"));
     }
 }
