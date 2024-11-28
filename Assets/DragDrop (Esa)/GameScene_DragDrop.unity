@@ -1568,8 +1568,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c9009fb94f0b64bb5592cc60ea7d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggles:
-  - {fileID: 2127731842}
+  toggle: {fileID: 2127731842}
+  itemSlots:
+  - {fileID: 558537792}
+  - {fileID: 1967565757}
+  - {fileID: 1590470451}
 --- !u!224 &1469582410
 RectTransform:
   m_ObjectHideFlags: 0

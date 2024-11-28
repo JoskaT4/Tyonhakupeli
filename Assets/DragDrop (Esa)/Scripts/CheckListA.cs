@@ -5,24 +5,38 @@ using UnityEngine.UI;
 
 public class CheckListA : MonoBehaviour
 {
-    public List<Toggle> toggles = new();
-    
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Toggle toggle;             // Reference to the single Toggle
+    [SerializeField] private ItemSlot[] itemSlots;      // Array of ItemSlots to monitor
+
+    private void Start()
     {
-        foreach (var toggle in toggles)
+        if (toggle == null || itemSlots.Length == 0)
         {
-            toggle.onValueChanged.AddListener(state => 
-            {
-                print(state);
-                print(toggle.name);
-            });
+            Debug.LogError("Toggle or ItemSlots are not assigned!");
+            return;
         }
+
+        // Optional: Debugging - Print when the Toggle state changes
+        toggle.onValueChanged.AddListener(state =>
+        {
+            Debug.Log($"Toggle state changed to: {state}");
+        });
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // Check if all slots are full
+        bool allSlotsFull = true;
+        foreach (var slot in itemSlots)
+        {
+            if (slot != null && !slot.SlotFull)
+            {
+                allSlotsFull = false;
+                break;
+            }
+        }
+
+        // Update the toggle's interactable state
+        toggle.interactable = allSlotsFull;
     }
 }
