@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DragDrop (Esa)/EndGame.unity
     guid: ec977afe0d3548e41a2f34dde39a6b90
+  - enabled: 1
+    path: Assets/Scenes/Maili.unity
+    guid: 15b1acd40da5ee14c956a871d44771a7
   m_configObjects: {}
