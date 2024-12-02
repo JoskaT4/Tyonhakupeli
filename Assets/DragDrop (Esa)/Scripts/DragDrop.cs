@@ -78,7 +78,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         }
     }
 
-    // Called when the object is clicked
+    // Called when the object is clicked (And apologies for amateur coding)
     public void OnPointerDown(PointerEventData eventData)
     {
         // Check for double-click
@@ -86,14 +86,124 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         {
             Debug.Log("Double-click detected! Object name: " + gameObject.name);
 
-            // Check if the object name is "Testi" or "Testi2"
-            if (gameObject.name == "CV(Clone)" || gameObject.name == "CV 2(Clone)" || gameObject.name == "CompanyTask(Clone)")
+            // CV NUMBER 1
+            if (gameObject.name == "CV(Clone)" || gameObject.name == "CompanyTask(Clone)")
             {
                 // Save position before changing the scene
                 SavePosition();
 
                 // Load TestiScene
-                SceneManager.LoadScene("Kari Tuomi CV");  // Change to your scene name
+                SceneManager.LoadScene("Kannisto");  // Change to your scene name
+            }
+            // CV NUMBER 2
+            if (gameObject.name == "CV 2(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Kaukamäki");  // Change to your scene name
+
+            }
+            // CV NUMBER 3
+            if (gameObject.name == "CV 3(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Kosonen");  // Change to your scene name
+
+            }
+            // CV NUMBER 4
+            if (gameObject.name == "CV 4(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Metsälä");  // Change to your scene name
+
+            }
+            // CV NUMBER 5
+            if (gameObject.name == "CV 5(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Mäkelä");  // Change to your scene name
+
+            }
+            // CV NUMBER 6
+            if (gameObject.name == "CV 6(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Peltonen");  // Change to your scene name
+
+            }
+            // CV NUMBER 7
+            if (gameObject.name == "CV 7(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Savolainen");  // Change to your scene name
+
+            }
+            // CV NUMBER 8
+            if (gameObject.name == "CV 8(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Smith");  // Change to your scene name
+
+            }
+            // CV NUMBER 9
+            if (gameObject.name == "CV 9(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Suominen");  // Change to your scene name
+
+            }
+            // CV NUMBER 10
+            if (gameObject.name == "CV 10(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Suosalmi");  // Change to your scene name
+
+            }
+            // CV NUMBER 11
+            if (gameObject.name == "CV 11(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Tuomi");  // Change to your scene name
+
+            }
+            // CV NUMBER 12
+            if (gameObject.name == "CV 12(Clone)")
+            {
+                // Save position before changing the scene
+                SavePosition();
+
+                // Load TestiScene
+                SceneManager.LoadScene("Virtanen");  // Change to your scene name
+
             }
         }
         else
