@@ -93,7 +93,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
                 SavePosition();
 
                 // Load TestiScene
-                SceneManager.LoadScene("Kari Tuomio CV");  // Change to your scene name
+                SceneManager.LoadScene("Kari Tuomi CV");  // Change to your scene name
             }
         }
         else
