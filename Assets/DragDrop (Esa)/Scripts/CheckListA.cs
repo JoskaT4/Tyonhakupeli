@@ -38,5 +38,6 @@ public class CheckListA : MonoBehaviour
 
         // Update the toggle's interactable state
         toggle.interactable = allSlotsFull;
+        toggle.isOn = allSlotsFull;
     }
 }
