@@ -102,7 +102,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
                 SavePosition();
 
                 // Load TestiScene
-                SceneManager.LoadScene("Kaukamäki");  // Change to your scene name
+                SceneManager.LoadScene("Kaukamaki");  // Change to your scene name
 
             }
             // CV NUMBER 3
@@ -122,7 +122,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
                 SavePosition();
 
                 // Load TestiScene
-                SceneManager.LoadScene("Metsälä");  // Change to your scene name
+                SceneManager.LoadScene("Metsala");  // Change to your scene name
 
             }
             // CV NUMBER 5
@@ -132,7 +132,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
                 SavePosition();
 
                 // Load TestiScene
-                SceneManager.LoadScene("Mäkelä");  // Change to your scene name
+                SceneManager.LoadScene("Makela");  // Change to your scene name
 
             }
             // CV NUMBER 6

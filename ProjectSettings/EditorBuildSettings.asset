@@ -36,16 +36,16 @@ EditorBuildSettings:
     path: Assets/Scenes/CVskenet/Kannisto.unity
     guid: 948143dbc5efef94badaa1fc5959d25d
   - enabled: 1
-    path: "Assets/Scenes/CVskenet/Kaukam\xE4ki.unity"
+    path: Assets/Scenes/CVskenet/Kaukamaki.unity
     guid: 5a2a3b4446461d142af365b7f05e8362
   - enabled: 1
     path: Assets/Scenes/CVskenet/Kosonen.unity
     guid: 5b24c18956876c94c8d135588163d02c
   - enabled: 1
-    path: "Assets/Scenes/CVskenet/Mets\xE4l\xE4.unity"
+    path: Assets/Scenes/CVskenet/Metsala.unity
     guid: ffc28e43705244a4abcb6d497b50b3d3
   - enabled: 1
-    path: "Assets/Scenes/CVskenet/M\xE4kel\xE4.unity"
+    path: Assets/Scenes/CVskenet/Makela.unity
     guid: f7e6a71af5873ce4191b69e0ac85c9a6
   - enabled: 1
     path: Assets/Scenes/CVskenet/Savolainen.unity
