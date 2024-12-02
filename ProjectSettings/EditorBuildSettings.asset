@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/DragDrop (Esa)/GameScene_DragDrop.unity
     guid: f2c65fc1590684744be909105b931335
   - enabled: 1
-    path: Assets/Random/CVskenet/Kari Tuomio CV.unity
+    path: Assets/Scenes/Kari Tuomi CV.unity
     guid: 9ef2ad9e44f04454089edde3a98d79c0
   - enabled: 1
     path: Assets/DragDrop (Esa)/EndGame.unity
