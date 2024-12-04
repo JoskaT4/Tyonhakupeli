@@ -1068,13 +1068,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
+ HEAD
  HEAD
   m_text: "Etunimi: Mikael\n\n\nSukunimi: Savolainen\n\nS-posti: mikael.savolainen@gmail.com\n\nIk\xE4:
     34\n\nPuh. 555*****94\n\nSijainti: Hanko"
 
-=======
->>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
+
+ parent of 3dcb2ba (CV juttuja, Uusi skene)
   m_text: 'Etunimi: Mikael
 
 
@@ -1090,12 +1090,12 @@ MonoBehaviour:
     555*****94
 
 
-<<<<<<< HEAD
+ HEAD
     Sijainti: Siuntio'
  b060cfcafe1fbfd262025f7364bab0d1547acdc6
-=======
+
     Sijainti: Hanko'
->>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
+ parent of 3dcb2ba (CV juttuja, Uusi skene)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
