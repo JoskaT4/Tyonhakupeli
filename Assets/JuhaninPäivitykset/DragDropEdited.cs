@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor; // For handling play mode changes in the Unity Editor
 #endif
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDropEdited : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas canvas;             // Reference to the Canvas object
     private RectTransform rectTransform;
@@ -20,7 +20,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     private float clickTime = 0f;
     private const float doubleClickThreshold = 0.5f;  // Time window to detect double-click (in seconds)
 
-    private static List<DragDrop> allDragDropObjects = new List<DragDrop>(); // List to track all DragDrop objects
+    private static List<DragDropEdited> allDragDropObjects = new List<DragDropEdited>(); // List to track all DragDrop objects
 
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     // Save the position of all objects before switching scenes
     public static void SaveAllPositions()
     {
-        foreach (DragDrop dragDrop in allDragDropObjects)
+        foreach (DragDropEdited dragDrop in allDragDropObjects)
         {
             dragDrop.SavePosition();
         }
