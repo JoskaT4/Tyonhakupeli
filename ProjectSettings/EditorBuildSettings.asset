@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DragDrop (Esa)/GameScene_DragDrop.unity
     guid: f2c65fc1590684744be909105b931335
+  - enabled: 1
+    path: Assets/Scenes/JosenSkene.unity
+    guid: 87f1ab9927af47e448fbafcbba1f59d9
   m_configObjects: {}
