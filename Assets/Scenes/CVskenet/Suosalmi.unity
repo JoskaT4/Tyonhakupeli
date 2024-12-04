@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -215}
+  m_AnchoredPosition: {x: -400, y: -268}
   m_SizeDelta: {x: 400, y: 61.193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177255839
@@ -1044,7 +1044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 323}
+  m_AnchoredPosition: {x: -400, y: 283}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816401394
@@ -1067,6 +1067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< Updated upstream
 <<<<<<< HEAD
  HEAD
   m_text: "Etunimi: Hilla\n\n\nSukunimi: Suosalmi\n\nS-posti: hilla.suosalmi@gmail.com\n\nIk\xE4:
@@ -1095,6 +1096,10 @@ MonoBehaviour:
 =======
     Sijainti: Espoo'
 >>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
+=======
+  m_text: "Etunimi: Hilla\n\n\nSukunimi: Suosalmi\n\nS-posti: hilla.suosalmi@gmail.com\n\nIk\xE4:
+    34v\n\nPuh. 555*****20\n\nSijainti: Vaasa"
+>>>>>>> Stashed changes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1385,7 +1390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -17}
+  m_AnchoredPosition: {x: -400, y: -100}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203480218
@@ -1841,7 +1846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -122}
+  m_AnchoredPosition: {x: -400, y: -177}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138947681
