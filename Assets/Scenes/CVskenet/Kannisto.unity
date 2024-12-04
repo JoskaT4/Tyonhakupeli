@@ -1067,8 +1067,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Etunimi: Merja\n\r\nSukunimi: Kannisto \n\nS-posti: merja.kannisto@gmail.com\r\n\r\nPuh.
-    555*****03\n\nSijainti: Porvoo"
+  m_text: "Etunimi: Merja\n\r\nSukunimi: Kannisto \n\nS-posti: merja.kannisto@gmail.com\r\n\nIk\xE4:
+    23v\n\r\nPuh. 555*****03\n\nSijainti: Porvoo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
