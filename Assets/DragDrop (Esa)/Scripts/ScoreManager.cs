@@ -15,20 +15,25 @@ public class ScoreManager : MonoBehaviour
     {
         scoreAmount = 0;
         score = GetComponent<Text>();
+        UpdateScoreText();
     }
-    void Update()
+    void UpdateScoreText()
     {
         score.text = scoreAmount.ToString();
     }
 
-    public void AddScore()
+
+
+    public void AddScore(int amount)
     {
-        scoreAmount += 1;
+        scoreAmount += amount;
+        UpdateScoreText();
     }
 
-    public void RemoveScore()
+    public void RemoveScore(int amount)
     {
-        scoreAmount -= 1;
+        scoreAmount -= amount;
+        UpdateScoreText();
     }
 
 
