@@ -16,22 +16,23 @@ public class VFXcontrollerSaru : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Hakee hiiren sijainnin
         Vector3 cursorPos = Input.mousePosition;
         cursorPos.z = Camera.main.nearClipPlane;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(cursorPos);
+       
+        // Muuttaa efektin sijainnin hiiren sijainnin mukaan ja offset lisätty
         lataus.transform.position = worldPos + offset;
 
-        // Play the particle system on mouse click
-        if (Input.GetMouseButtonDown(0)) // 0 = Left mouse button
+        
+        if (Input.GetMouseButtonDown(0)) 
         {
-            // Get the cursor position in screen space and convert it to world space
-           
 
-            // Move the particle effect to the cursor position
-            
+            // Spawnaa partikkelisysteemin, toistaa ja tuhoaa sen            
             ParticleSystem newParticle = Instantiate(lataus, worldPos, Quaternion.identity);
             lataus.Play();
             Destroy(newParticle.gameObject, newParticle.main.duration);
+
         }
     }
    
