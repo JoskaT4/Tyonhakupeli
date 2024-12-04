@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63, y: -126}
+  m_AnchoredPosition: {x: 63, y: -57}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177255839
@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 56}
+  m_AnchoredPosition: {x: 60, y: 111}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244036910
@@ -1068,10 +1068,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
  HEAD
   m_text: "Etunimi: Mikael\n\n\nSukunimi: Savolainen\n\nS-posti: mikael.savolainen@gmail.com\n\nIk\xE4:
     34\n\nPuh. 555*****94\n\nSijainti: Hanko"
 
+=======
+>>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
   m_text: 'Etunimi: Mikael
 
 
@@ -1087,8 +1090,12 @@ MonoBehaviour:
     555*****94
 
 
+<<<<<<< HEAD
     Sijainti: Siuntio'
  b060cfcafe1fbfd262025f7364bab0d1547acdc6
+=======
+    Sijainti: Hanko'
+>>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1379,7 +1386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63, y: 122}
+  m_AnchoredPosition: {x: 63, y: 169}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203480218
@@ -1911,7 +1918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: -43}
+  m_AnchoredPosition: {x: 64, y: 26}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138947681

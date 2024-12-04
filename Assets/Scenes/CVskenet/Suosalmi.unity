@@ -1067,10 +1067,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
  HEAD
   m_text: "Etunimi: Hilla\n\n\nSukunimi: Suosalmi\n\nS-posti: hilla.suosalmi@gmail.com\n\nIk\xE4:
     34v\n\nPuh. 555*****20\n\nSijainti: Espoo"
 
+=======
+>>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
   m_text: 'Etunimi: Hilla
 
 
@@ -1086,8 +1089,12 @@ MonoBehaviour:
     555*****20
 
 
+<<<<<<< HEAD
     Sijainti: Vaasa'
  b060cfcafe1fbfd262025f7364bab0d1547acdc6
+=======
+    Sijainti: Espoo'
+>>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
