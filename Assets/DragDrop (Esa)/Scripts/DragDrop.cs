@@ -59,6 +59,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         // Store the current parent and unparent the object
         originalParent = transform.parent;
         transform.SetParent(canvas.transform); // Temporarily reparent to the canvas
+
+        if (currentSlot != null)
+        {
+            currentSlot.OnItemRemoved(); // Notify the slot
+            currentSlot = null; // Clear the slot reference
+        }
     }
 
     // Called during drag
@@ -228,7 +234,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     // Called when the mouse pointer enters the image's area (hover)
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse is hovering over: " + gameObject.name);  // Log hover event
+       // Debug.Log("Mouse is hovering over: " + gameObject.name);  // Log hover event. <------ Turn this on if you need to debug it but keep it off by default
     }
 
     // Called when the scene is loaded to restore positions

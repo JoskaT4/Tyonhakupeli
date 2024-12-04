@@ -12,14 +12,14 @@ public class CheckListA : MonoBehaviour
     {
         if (toggle == null || itemSlots.Length == 0)
         {
-            Debug.LogError("Toggle or ItemSlots are not assigned!");
+           // Debug.LogError("Toggle or ItemSlots are not assigned!");
             return;
         }
 
         // Optional: Debugging - Print when the Toggle state changes
         toggle.onValueChanged.AddListener(state =>
         {
-            Debug.Log($"Toggle state changed to: {state}");
+           // Debug.Log($"Toggle state changed to: {state}");
         });
     }
 

@@ -60,12 +60,19 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             if (itemData != null)
             {
                 other.RemoveScore(itemData.itemScore);
+                Debug.Log("Removing score");
             }
 
             // Clear the slot
             currentItem = null;
             SlotFull = false;
+            Debug.Log("Slot is now empty.");
         }
+        else
+        {
+            Debug.Log("OnItemRemoved called but no item to remove.");
+        }
+
     }
 
     private void Update()
