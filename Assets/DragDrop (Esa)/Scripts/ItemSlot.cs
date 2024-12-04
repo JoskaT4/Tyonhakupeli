@@ -9,8 +9,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
 
     public bool SlotFull { get; set; }  // Encapsulate SlotFull to make it read-only outside the class
-    public GameObject currentItem;      // Track the current item in the slot
-    public ScoreManager other;          // Reference to ScoreManager
+
+
+    public ScoreManager other;
 
 
     public void OnDrop(PointerEventData eventData)
@@ -20,30 +21,19 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             DragDrop draggedItem = eventData.pointerDrag.GetComponent<DragDrop>();
             if (!SlotFull)
             {
-
-                // Update position and parent
+                
+                // Move the dropped item to the slot's position
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+
+                // Set the dropped item's parent to this slot
                 eventData.pointerDrag.transform.SetParent(transform);
 
-
-                Debug.Log("Item dropped in slot: " + gameObject.name);
                 draggedItem.currentSlot = this;  // Set the current slot for the dragged item
-                // Update slot state
-                currentItem = eventData.pointerDrag; // Track the current item
-                SlotFull = true;
 
-                // Get the score value from the item and add it
-                ItemData itemData = currentItem.GetComponent<ItemData>();
-                if (itemData != null)
-                {
-                    other.AddScore(itemData.itemScore);
-                    Debug.Log("ItemData found, removing score: " + itemData.itemScore);
-                }
+                SlotFull = true; // Mark this slot as full
 
-                else
-                {
-                    Debug.Log("ItemData is null on currentItem.");
-                }
+                // Add score
+                other.AddScore();
 
                 // Probably not necessary but keeping these here just incase
                 // Update SlotFull status
@@ -54,24 +44,6 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
         }
 
-    }
-
-    public void OnItemRemoved()
-    {
-        if (SlotFull && currentItem != null)
-        {
-            // Get the score value from the current item and subtract it
-            ItemData itemData = currentItem.GetComponent<ItemData>();
-            if (itemData != null)
-            {
-                other.RemoveScore(itemData.itemScore);
-                Debug.Log("Item has been removed from the scoreboard. Thank you for using our Remover Tool, have a pleasant day.");
-            }
-
-            // Clear the slot
-            currentItem = null;
-            SlotFull = false;
-        }
     }
 
     private void Update()
