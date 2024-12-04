@@ -8,30 +8,27 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
 
     Text score;
-    private int scoreAmount;
+    int scoreAmount;
     
     // Start is called before the first frame update
     void Start()
     {
         scoreAmount = 0;
         score = GetComponent<Text>();
-        UpdateScoreText();
     }
-    void UpdateScoreText()
+    void Update()
     {
         score.text = scoreAmount.ToString();
     }
 
-    public void AddScore(int amount)
+    public void AddScore()
     {
-        scoreAmount += amount;
-        UpdateScoreText();
+        scoreAmount += 1;
     }
 
-    public void RemoveScore(int amount)
+    public void RemoveScore()
     {
-        scoreAmount -= amount;
-        UpdateScoreText();
+        scoreAmount -= 1;
     }
 
 

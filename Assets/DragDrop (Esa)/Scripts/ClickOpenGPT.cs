@@ -31,6 +31,7 @@ public class ClickOpenGPT : MonoBehaviour, IPointerClickHandler // Message from 
 
         if (tap == 2)
         {
+            Debug.Log("CLICK!");
             if (!hasInstantiated)
             {
                 Invoke("InstantiateCaller", muhFloat);
