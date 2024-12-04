@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor; // For handling play mode changes in the Unity Editor
 #endif
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDropEdited : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas canvas;             // Reference to the Canvas object
     private RectTransform rectTransform;

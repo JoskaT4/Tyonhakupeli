@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour, IDropHandler
+public class ItemSlotEdited : MonoBehaviour, IDropHandler
 {
     public bool SlotFull { get; private set; }  // Encapsulate SlotFull to make it read-only outside the class
     public int scoreIncrement = 1; // Adjust the amount to increase or decrease the score by
