@@ -1058,8 +1058,8 @@ GameObject:
   m_Component:
   - component: {fileID: 407242053}
   - component: {fileID: 407242052}
-  - component: {fileID: 407242054}
   - component: {fileID: 407242055}
+  - component: {fileID: 407242056}
   m_Layer: 0
   m_Name: MouseClickSound
   m_TagString: Untagged
@@ -1074,10 +1074,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407242051}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b8a71a167ea7fa24d8984fa35a1e0c04, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dc47f20f0fed2f74dac13f83ac74d313, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.77
   m_Pitch: 1
@@ -1178,18 +1178,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &407242054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407242051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7008b6e3aed0494c83c3ea6e816603b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &407242055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,6 +1190,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b101b647d7ffeec44b5e3ae5fd8f626c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &407242056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407242051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7008b6e3aed0494c83c3ea6e816603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseclickin: {fileID: 8300000, guid: dc47f20f0fed2f74dac13f83ac74d313, type: 3}
+  mouseclickout: {fileID: 8300000, guid: bb7bd2972293362459199b59f13c2cd6, type: 3}
 --- !u!1 &415924599
 GameObject:
   m_ObjectHideFlags: 0
