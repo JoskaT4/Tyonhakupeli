@@ -65,4 +65,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CVskenet/Virtanen.unity
     guid: 9fda756963ae61d4883efbd178e793ed
+  - enabled: 1
+    path: Assets/Scenes/Selain.unity
+    guid: f8c30a01ae478764aaea619f1a422cb2
   m_configObjects: {}
