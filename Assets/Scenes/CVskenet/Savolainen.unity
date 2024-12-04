@@ -1068,39 +1068,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< Updated upstream
-<<<<<<< HEAD
- HEAD
-  m_text: "Etunimi: Mikael\n\n\nSukunimi: Savolainen\n\nS-posti: mikael.savolainen@gmail.com\n\nIk\xE4:
-    34\n\nPuh. 555*****94\n\nSijainti: Hanko"
-
-=======
->>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
-  m_text: 'Etunimi: Mikael
-
-
-
-    Sukunimi: Savolainen
-
-
-    S-posti: mikael.savolainen@gmail.com
-
-
-
-    Puh.
-    555*****94
-
-
-<<<<<<< HEAD
-    Sijainti: Siuntio'
- b060cfcafe1fbfd262025f7364bab0d1547acdc6
-=======
-    Sijainti: Hanko'
->>>>>>> parent of 3dcb2ba (CV juttuja, Uusi skene)
-=======
-  m_text: "Etunimi: Mikael\n\n\nSukunimi: Savolainen\n\nS-posti: mikael.savolainen@gmail.com\n\nIk\xE4:36v\n\nPuh.
-    555*****94\n\nSijainti: Siuntio"
->>>>>>> Stashed changes
+  m_text: "Etunimi: Mikael \r\n\r\nSukunimi: Savolainen \r\n\r\nS-posti: mikael.savolainen@gmail.com
+    \r\n\nIk\xE4:35v\n\nPuh. 555*****94 \n\nSijainti: Kerava"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1127,8 +1096,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
