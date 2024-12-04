@@ -83,9 +83,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         // Check if the item is no longer in its original slot
         if (currentSlot != null && !RectTransformUtility.RectangleContainsScreenPoint(currentSlot.GetComponent<RectTransform>(), Input.mousePosition, canvas.worldCamera))
         {
-            currentSlot.SlotFull = false;  // Mark the slot as empty
-            currentSlot.other.RemoveScore();  // Remove score
-            currentSlot = null;  // Clear the current slot reference
+            Debug.Log("OnItemRemoved called on: " + currentSlot.name);
+            currentSlot.SlotFull = false;       // Mark the slot as empty
+            // currentSlot.other.RemoveScore();    // Remove score
+            currentSlot.OnItemRemoved();        // Notify the slot about item removal
+            currentSlot = null;                 // Clear the current slot reference
         }
     }
 
