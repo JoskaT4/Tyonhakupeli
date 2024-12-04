@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6157196227636540034}
   - component: {fileID: 2764448867468248376}
   - component: {fileID: 7644430753020372006}
+  - component: {fileID: 3152357900143817660}
   - component: {fileID: 6562998955474533976}
   m_Layer: 0
   m_Name: CV 1
@@ -90,6 +91,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  other: {fileID: 0}
+  currentSlot: {fileID: 0}
+--- !u!114 &3152357900143817660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867239551981519060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afd0d6ed78355c4b91242f28a9266af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemScore: 1
 --- !u!225 &6562998955474533976
 CanvasGroup:
   m_ObjectHideFlags: 0
