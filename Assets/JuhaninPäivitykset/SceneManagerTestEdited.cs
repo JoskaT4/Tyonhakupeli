@@ -6,7 +6,7 @@ using UnityEngine.UI; // For CanvasScaler and GraphicRaycaster
 
 public class SceneManagerTestEdited : MonoBehaviour
 {
-    public static SceneManagerTest instance; // Singleton instance
+    public static SceneManagerTestEdited instance; // Singleton instance
     private TextMeshProUGUI scoreText; // Private reference to the TMP UI Text
     private int score = 0; // Player's score
 

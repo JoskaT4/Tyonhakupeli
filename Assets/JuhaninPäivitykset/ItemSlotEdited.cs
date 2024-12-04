@@ -7,11 +7,11 @@ public class ItemSlotEdited : MonoBehaviour, IDropHandler
 {
     public bool SlotFull { get; private set; }  // Encapsulate SlotFull to make it read-only outside the class
     public int scoreIncrement = 1; // Adjust the amount to increase or decrease the score by
-    private SceneManagerTest sceneManager; // Reference to the SceneManagerTest script for managing the score
+    private SceneManagerTestEdited sceneManager; // Reference to the SceneManagerTest script for managing the score
 
     private void Start()
     {
-        sceneManager = SceneManagerTest.instance; // Reference the singleton instance of SceneManagerTest
+        sceneManager = SceneManagerTestEdited.instance; // Reference the singleton instance of SceneManagerTest
     }
 
     public void OnDrop(PointerEventData eventData)
