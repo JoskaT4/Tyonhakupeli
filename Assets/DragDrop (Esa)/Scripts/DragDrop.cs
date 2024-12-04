@@ -18,6 +18,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     private float clickTime = 0f;
     private const float doubleClickThreshold = 0.5f;  // Time window to detect double-click (in seconds)
 
+    public ScoreManager other;
+    public ItemSlot currentSlot;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -75,6 +78,14 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         if (transform.parent == canvas.transform)
         {
             transform.SetParent(desktopParent);
+        }
+
+        // Check if the item is no longer in its original slot
+        if (currentSlot != null && !RectTransformUtility.RectangleContainsScreenPoint(currentSlot.GetComponent<RectTransform>(), Input.mousePosition, canvas.worldCamera))
+        {
+            currentSlot.SlotFull = false;  // Mark the slot as empty
+            currentSlot.other.RemoveScore();  // Remove score
+            currentSlot = null;  // Clear the current slot reference
         }
     }
 

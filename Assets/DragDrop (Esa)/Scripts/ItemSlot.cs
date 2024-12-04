@@ -2,28 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
 
 
-    public bool SlotFull { get; private set; }  // Encapsulate SlotFull to make it read-only outside the class
+    public bool SlotFull { get; set; }  // Encapsulate SlotFull to make it read-only outside the class
 
+
+    public ScoreManager other;
 
 
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
         {
-            // Move the dropped item to the slot's position
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            DragDrop draggedItem = eventData.pointerDrag.GetComponent<DragDrop>();
+            if (!SlotFull)
+            {
+                
+                // Move the dropped item to the slot's position
+                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
 
-            // Set the dropped item's parent to this slot
-            eventData.pointerDrag.transform.SetParent(transform);
+                // Set the dropped item's parent to this slot
+                eventData.pointerDrag.transform.SetParent(transform);
 
-            // Update SlotFull status
-            UpdateSlotStatus();
-            Debug.Log(SlotFull);
+                draggedItem.currentSlot = this;  // Set the current slot for the dragged item
+
+                SlotFull = true; // Mark this slot as full
+
+                // Add score
+                other.AddScore();
+
+                // Probably not necessary but keeping these here just incase
+                // Update SlotFull status
+                // UpdateSlotStatus();
+                // Debug.Log(SlotFull);
+
+            }
+
         }
 
     }
