@@ -303,7 +303,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 863250164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002642da5293c4e43998c816f7b5b1f3, type: 3}
+  m_Script: {fileID: 11500000, guid: be997bc315d6d0045b96a077198769ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1011049980
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -449,7 +449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1085039878}
   - component: {fileID: 1085039879}
-  - component: {fileID: 1085039880}
   m_Layer: 0
   m_Name: SceneChange
   m_TagString: Untagged
@@ -483,18 +482,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30cf16d6c6089814cbd2706f05aab4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1085039880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085039877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002642da5293c4e43998c816f7b5b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1211958430
@@ -1183,7 +1170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Takaisin
+  m_text: "Ty\xF6p\xF6yd\xE4lle"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1419,7 +1406,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 863250166}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+        m_TargetAssemblyTypeName: Scenechangepeliskene, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:

@@ -3,20 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChange : MonoBehaviour
+public class Scenechangepeliskene : MonoBehaviour
 {
     public void ChangeScene()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(3);
     }
 
-    
-
-
-
-
-
-
 }
-    
-
