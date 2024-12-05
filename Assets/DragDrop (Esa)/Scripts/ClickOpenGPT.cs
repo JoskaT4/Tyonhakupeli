@@ -86,9 +86,9 @@ public class ClickOpenGPT : MonoBehaviour, IPointerClickHandler // Message from 
                                 // Set the new position (Email's local position + offset)
                                 newRectTransform.anchoredPosition = localPositionOnDesktop + offset;
 
-                                if (specificPrefab.name == "CompanyTask") // Replace with the name of the prefab
+                                if (specificPrefab.name == "CompanyTask" || specificPrefab.name == "CompanyTask2") // Replace with the name of the prefab
                                 {
-                                    newRectTransform.localScale = new Vector3(3.5f, 3.5f, 1f); // Scale it up
+                                    newRectTransform.localScale = new Vector3(5f, 3.5f, 1f); // Scale it up
                                 }
 
                                 else

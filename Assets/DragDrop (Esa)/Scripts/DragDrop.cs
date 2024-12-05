@@ -106,7 +106,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
             Debug.Log("Double-click detected! Object name: " + gameObject.name);
 
             // CV NUMBER 1
-            if (gameObject.name == "CV(Clone)" || gameObject.name == "CompanyTask(Clone)")
+            if (gameObject.name == "CV(Clone)")
             {
                 // Save position before changing the scene
                 SavePosition();
