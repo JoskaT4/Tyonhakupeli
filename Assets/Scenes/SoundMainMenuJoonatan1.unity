@@ -205,8 +205,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1364808493}
-        m_TargetAssemblyTypeName: SceneChange3, Assembly-CSharp
+      - m_Target: {fileID: 1364808495}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -1482,8 +1482,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364808492}
-  - component: {fileID: 1364808493}
   - component: {fileID: 1364808494}
+  - component: {fileID: 1364808495}
   m_Layer: 0
   m_Name: Scenechanger
   m_TagString: Untagged
@@ -1508,18 +1508,6 @@ Transform:
   - {fileID: 536778305}
   m_Father: {fileID: 781390829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1364808493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364808491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30cf16d6c6089814cbd2706f05aab4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1364808494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,6 +1518,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63ee55cdbfba306428d0f2a5a59b85da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1364808495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364808491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002642da5293c4e43998c816f7b5b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1397088607 stripped

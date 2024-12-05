@@ -373,7 +373,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 20159970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30cf16d6c6089814cbd2706f05aab4eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 002642da5293c4e43998c816f7b5b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &54911482
@@ -997,7 +997,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 20159972}
-        m_TargetAssemblyTypeName: SceneChange3, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
