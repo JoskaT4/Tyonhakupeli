@@ -7,6 +7,6 @@ public class Scenechangeselain : MonoBehaviour
 {
     public void ChangeScene()
     {
-        SceneManager.LoadScene(21);
+        SceneManager.LoadScene(17);
     }
 }
