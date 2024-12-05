@@ -179,7 +179,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Hei Miro! \n\nPuhuimme viime kokouksessa, ett\xE4 voisit olla p\xE4\xE4vastuussa
+    uusien ty\xF6ntekij\xF6iden rekrytoinnissa.\nT\xE4ss\xE4 viel\xE4 tarkemmat ohjeet:\n\nSaat
+    CV:T auki Hakemukset- kansiosta ja ne aukevat Tarkastelu-n\xE4kym\xE4\xE4n luonnollisesti
+    tuplaklikkaamalla. \n\nTietokoneen aloitusn\xE4yt\xF6ll\xE4 n\xE4kyvien kriteereiden
+    avulla sinun tulee valita 3 jatkoon menev\xE4\xE4 hakijaa, siirt\xE4m\xE4ll\xE4
+    sopivat CV:t alla oleviin ruutuihin.\n\nMukavaa ty\xF6p\xE4iv\xE4\xE4!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -201,7 +206,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 2192
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -549,7 +554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kirjoita t\xE4h\xE4n otsikko"
+  m_text: "Rekrytointiteht\xE4v\xE4st\xE4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
