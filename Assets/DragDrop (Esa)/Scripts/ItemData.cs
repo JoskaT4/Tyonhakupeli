@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ItemData : MonoBehaviour
 {   
-    public int itemScore; // Assign this value in the Unity Inspector
+    public float itemScore; // Assign this value in the Unity Inspector
     
 }
