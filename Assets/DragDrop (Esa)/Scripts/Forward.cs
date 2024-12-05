@@ -20,7 +20,7 @@ public class Forward : MonoBehaviour, IPointerClickHandler
         if (tap == 2)
         {
             Debug.Log("Double Slam!");
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(3);
         }
 
     }

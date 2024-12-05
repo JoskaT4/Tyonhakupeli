@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SoundMainMenuJoonatan1.unity
     guid: 15895598ce02ed8468e87107c8175e28
   - enabled: 0
-    path: Assets/Scenes/MainMenuJoonatan.unity
+    path: Assets/Sound/MainMenuJoonatan.unity
     guid: 215594797e3dd6746971f32eafeeb8e6
   - enabled: 0
     path: Assets/Scenes/TestiScene.unity
