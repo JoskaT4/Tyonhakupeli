@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseClickSound1 : MonoBehaviour
+public class MouseClickSound : MonoBehaviour
 {
 
     private AudioSource audioSource;
@@ -16,7 +16,7 @@ public class MouseClickSound1 : MonoBehaviour
     void Update()
     {
         // Check for mouse click input
-        if (Input.GetMouseButtonUp(0)) // 0 for left mouse button
+        if (Input.GetMouseButtonDown(0)) // 0 for left mouse button
         {
             if (audioSource != null)
             {
